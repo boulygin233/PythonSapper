@@ -47,7 +47,6 @@ def main():
         text = fint.render("Game Over!", True, RED)
         sc.blit(text, [(W // 2) - 96, (H // 2) - 20])
         pygame.display.update()
-        pygame.time.delay(500)
 
     def question(x, y):
         pygame.draw.polygon(sc, GRAY, [[21 + x * 20, 21 + y * 20], [21 + x * 20, 39 + y * 20],
@@ -244,6 +243,7 @@ def main():
                                                [39 + x_ * 20, 39 + y_ * 20], [39 + x_ * 20, 21 + y_ * 20]])
                 pygame.display.update()
                 self.status[x_][y_] = 0
+
         def rightclick(self, x_, y_):
             if self.status[x_][y_] == 0:
                 flag(x_, y_)
