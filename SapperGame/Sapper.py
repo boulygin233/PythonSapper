@@ -330,6 +330,9 @@ def main():
                     GM = False
             if Game.count == 0:
                 fint = pygame.font.Font(None, 50)
+                pygame.draw.polygon(sc, (50, 50, 50), [[(W // 2) - 100, (H // 2) - 50], [(W // 2) - 100, (H // 2) + 50],
+                                                       [(W // 2) + 100, (H // 2) + 50],
+                                                       [(W // 2) + 100, (H // 2) - 50]])
                 text = fint.render("You Win!", True, GREEN)
                 sc.blit(text, [(W // 2) - 70, (H // 2) - 20])
                 pygame.display.update()
